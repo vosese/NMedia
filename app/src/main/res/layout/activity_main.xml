@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toStartOf="@id/authorTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@sample/posts_avatars" />
+        app:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/authorTextView"
