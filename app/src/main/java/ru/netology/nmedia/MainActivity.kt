@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import ru.netology.nmedia.databinding.ActivityMainBinding
 import ru.netology.nmedia.dto.Post
+import ru.netology.nmedia.dto.reformat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,15 +36,11 @@ class MainActivity : AppCompatActivity() {
                 if (post.likedByMe) post.likes-- else post.likes++
                 post.likedByMe = !post.likedByMe
                 likeButton.setImageResource(if (post.likedByMe) R.drawable.red_heart else R.drawable.baseline_favorite_border_24)
-                likeTextView.text = post.likes.toString()
-            }
-
-            if (post.toShare) {
-                shareButton.setImageResource(R.drawable.baseline_share_24)
+                likeTextView.text = reformat(post.likes)
             }
             shareButton.setOnClickListener {
                 if (post.toShare) post.share-- else post.share++
-                shareTextView.text = post.share.toString()
+                shareTextView.text = reformat(post.share)
 
             }
         }
