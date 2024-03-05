@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             authorTextView.text = post.author
             publishedTextView.text = post.published
             contentTextView.text = post.content
-            likeTextView.text = post.likes.toString()
-            shareTextView.text = post.share.toString()
+            likeTextView.text = "${post.likes}"
+            shareTextView.text = "${post.share}"
             if (post.likedByMe) {
                 likeButton.setImageResource(R.drawable.red_heart)
             }
