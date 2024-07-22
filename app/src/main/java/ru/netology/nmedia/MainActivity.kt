@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 shareTextView.text = reformat(post.share)
             }
 
-
         }
 
 

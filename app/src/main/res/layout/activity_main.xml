@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toTopOf="@id/barrier"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@sample/posts_avatars" />
+        android:src="@drawable/color" />
 
     <TextView
         android:id="@+id/textAuthor"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textAuthor"
         app:layout_constraintTop_toTopOf="@id/avatar"
-        app:srcCompat="@drawable/baseline_more_vert_24" />
+        android:src="@drawable/baseline_more_vert_24" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"

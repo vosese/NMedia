@@ -24,7 +24,7 @@ fun reformat(i: Int): String {
         b in 1..9 && i < 10000 -> result = "${a}.${b}K"
         b in 0..9 && i in 10000..999999 -> result = "${a}K"
         i >= 1000000 && d in 0..9 -> result = "${c}M"
-        c <= 1 && d in 1..9 -> result = "${c}.${d}M"
+        i >= 1000000 && d in 1..9 -> result = "${c}.${d}M"
     }
     return result
 }
