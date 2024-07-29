@@ -22,16 +22,16 @@ class MainActivity : AppCompatActivity() {
             authorAvatar = "@sample/posts_avatars",
             published = "21 мая в 18:36",
             content = "Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дезайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое вжное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть бельше. целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен → http://netolo.gy/fyb",
-            likes = 1245888888,
-            share = 9999
+            likes = 10,
+            share = 10
         )
 
         with(binding) {
             textAuthor.text = post.author
             published.text = post.published
             content.text = post.content
-            likeTextView.text = post.likes.toString()
-            shareTextView.text = post.share.toString()
+            likeTextView.text = reformat(post.likes)
+            shareTextView.text = reformat(post.share)
             if (post.likedByMe) {
                 likeButton.setImageResource(R.drawable.red_heart_24)
             }
